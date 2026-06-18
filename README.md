@@ -39,3 +39,24 @@ Follows the required structure.
 ```bash
 pip install -r requirements.txt
 jupyter notebook notebooks/feature-engineering.ipynb
+ ## Task 2: Model Building & Training (Completed)
+
+- **Baseline**: Logistic Regression
+- **Best Model**: XGBoost
+- Primary Metrics: **AUC-PR** and **F1-Score** (suitable for imbalanced data)
+
+## Task 3: Model Explainability
+
+- Used SHAP for interpretability
+- Top features: `time_since_signup`, `purchase_value`, `hour_of_day`, etc.
+- Visualizations saved in notebooks/
+
+## Business Recommendations
+1. Flag transactions with very low `time_since_signup` (< 1 hour) for extra verification.
+2. Monitor high `purchase_value` at unusual hours.
+3. Add country-based risk scoring.
+
+## Final Submission Files
+- Comprehensive README
+- Clean project structure
+- modeling.ipynb + shap-explainability.ipynb
